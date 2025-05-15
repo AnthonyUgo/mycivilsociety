@@ -10,7 +10,7 @@ main {
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: linear-gradient(to bottom, #e3f2fd, #ffffff);
   color: #212121;
   line-height: 1.6;
@@ -34,10 +34,10 @@ body {
 .navbar ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;  /* ✅ wrap links on smaller screens */
+  flex-wrap: wrap;
   gap: 20px;
   padding: 0;
-  margin: 10px 0 0 0;
+  margin: 0; /* ✅ removes the top margin gap */
 }
 
 .navbar a {
@@ -65,8 +65,10 @@ body {
 
 
 .hero-center-logo {
-  text-align: center;
-  margin: 40px auto 0;
+  display: block;
+  margin: 0 auto 25px;
+  max-width: 220px;
+  height: auto;
 }
 
 .hero-center-logo img {

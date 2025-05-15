@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Civil Society | Empowering Youth</title>
- <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -14,6 +15,12 @@
       <img src="assets/LeftIcon.png" alt="CS Icon" class="nav-logo-icon" />
     </a>
   </div>
+
+  <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">
+  ☰
+</button>
+
+<div class="nav-links" id="nav-links">
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
@@ -21,8 +28,7 @@
     <li><a href="#contact">Contact</a></li>
     <li><a href="careers.html">Careers</a></li>
   </ul>
-</nav>
-
+</div>
 </nav>
 <main>
 <header class="hero">
@@ -76,5 +82,15 @@
   <footer>
     <p>© 2025 My Civil Society. All rights reserved.</p>
   </footer>
+
+  <script>
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
 </body>
 </html>
