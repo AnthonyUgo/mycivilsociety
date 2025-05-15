@@ -60,6 +60,19 @@ body {
   color: #bbdefb;
 }
 
+.nav-logo-icon {
+  height: 48px; /* Adjust size here */
+  width: auto;
+  vertical-align: middle;
+  padding: 5px 0;
+  transition: transform 0.2s ease;
+}
+
+.nav-logo-icon:hover {
+  transform: scale(1.05);
+}
+
+
 /* Hero Section */
 .hero {
   background: linear-gradient(to right, #0d47a1, #1976d2);
