@@ -5,13 +5,16 @@
   box-sizing: border-box;
 }
 
+main {
+  padding-top: 80px; /* Matches navbar height */
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to bottom, #e3f2fd, #ffffff);
   color: #212121;
   line-height: 1.6;
-  body { background: #fefefe; border: 5px solid red; }
-}
+ }
 
 /* Navigation */
 .navbar {
@@ -20,18 +23,46 @@ body {
   width: 100%;
   background-color: #0d47a1;
   display: flex;
+  flex-wrap: wrap; /* ✅ allow wrapping on mobile */
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 10px 20px;
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.nav-logo {
-  height: 40px;
-  width: auto;
-  vertical-align: middle;
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;  /* ✅ wrap links on smaller screens */
+  gap: 20px;
+  padding: 0;
+  margin: 10px 0 0 0;
 }
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-logo-icon {
+    height: 36px;
+  }
+
+  .navbar ul {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 
 .hero-center-logo {
   text-align: center;
@@ -41,19 +72,6 @@ body {
 .hero-center-logo img {
   max-width: 220px;
   height: auto;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
