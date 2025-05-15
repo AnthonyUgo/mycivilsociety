@@ -10,6 +10,7 @@ body {
   background: linear-gradient(to bottom, #e3f2fd, #ffffff);
   color: #212121;
   line-height: 1.6;
+  body { background: #fefefe; border: 5px solid red; }
 }
 
 /* Navigation */
