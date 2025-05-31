@@ -232,10 +232,13 @@ globalStyle('@media (max-width: 768px) .hamburger', {
 globalStyle('@media (max-width: 768px) .nav-links', {
   display: 'none',
   width: '100%',
+  flexDirection: 'column', // ensures it stacks vertically
 });
 
 globalStyle('@media (max-width: 768px) .nav-links.active', {
-  display: 'block',
+  display: 'flex', // changed from 'block' to 'flex'
+  flexDirection: 'column',
+  alignItems: 'center',
   textAlign: 'center',
   backgroundColor: '#0d47a1',
   padding: '10px 0',
@@ -243,7 +246,10 @@ globalStyle('@media (max-width: 768px) .nav-links.active', {
 
 globalStyle('@media (max-width: 768px) .nav-links ul', {
   flexDirection: 'column',
+  alignItems: 'center',
   gap: '10px',
+  margin: 0,
+  padding: 0,
 });
 
 globalStyle('@media (max-width: 768px) .nav-links ul li', {
