@@ -92,7 +92,7 @@ globalStyle('.hero', {
 });
 
 globalStyle('.hero-center-logo', {
-  height: '120px',
+  height: '180px',
   width: 'auto',
   display: 'block',
   margin: '0 auto 20px',
