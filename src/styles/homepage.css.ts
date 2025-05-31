@@ -108,9 +108,9 @@ globalStyle('@media (max-width: 768px) .hamburger', {
 
 /* Hide nav-links by default on mobile */
 globalStyle('@media (max-width: 768px) .nav-links', {
-  display: 'none',
+  display: 'none !important',
   position: 'absolute',
-  top: '60px', // Adjust as needed
+  top: '60px',
   right: 0,
   backgroundColor: '#0d47a1',
   width: '200px',
@@ -120,9 +120,8 @@ globalStyle('@media (max-width: 768px) .nav-links', {
   boxShadow: '0 2px 5px rgba(0,0,0,0.2)',
 });
 
-/* Show nav-links when active on mobile */
 globalStyle('@media (max-width: 768px) .nav-links.active', {
-  display: 'flex',
+  display: 'flex !important',
 });
 
 /* Stack nav-links vertically on mobile */
