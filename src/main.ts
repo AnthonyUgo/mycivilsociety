@@ -5,5 +5,7 @@ const toggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('nav-links');
 
 toggle?.addEventListener('click', () => {
+  const expanded = toggle.getAttribute('aria-expanded') === 'true';
+  toggle.setAttribute('aria-expanded', String(!expanded));
   navLinks?.classList.toggle('active');
 });
