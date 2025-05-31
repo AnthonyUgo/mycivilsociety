@@ -53,6 +53,7 @@ globalStyle('.navbar', {
   boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
 });
 
+/* Logo */
 globalStyle('.nav-logo-icon', {
   height: '48px',
   width: 'auto',
@@ -62,6 +63,11 @@ globalStyle('.nav-logo-icon', {
 
 globalStyle('.nav-logo-icon:hover', {
   transform: 'scale(1.05)',
+});
+
+/* Nav Links (Desktop) */
+globalStyle('.nav-links', {
+  display: 'flex',
 });
 
 globalStyle('.nav-links ul', {
@@ -77,10 +83,59 @@ globalStyle('.nav-links ul li a', {
   textDecoration: 'none',
   fontWeight: 600,
   fontSize: '1rem',
+  transition: 'color 0.3s ease',
 });
 
 globalStyle('.nav-links ul li a:hover', {
   color: '#bbdefb',
+});
+
+/* Hamburger (Hidden by Default) */
+globalStyle('.hamburger', {
+  fontSize: '28px',
+  background: 'none',
+  color: '#ffffff',
+  border: 'none',
+  cursor: 'pointer',
+  display: 'none', // Hidden by default on desktop
+  marginLeft: 'auto',
+});
+
+/* Show hamburger on mobile */
+globalStyle('@media (max-width: 768px) .hamburger', {
+  display: 'block',
+});
+
+/* Hide nav-links by default on mobile */
+globalStyle('@media (max-width: 768px) .nav-links', {
+  display: 'none',
+  position: 'absolute',
+  top: '60px', // Adjust as needed
+  right: 0,
+  backgroundColor: '#0d47a1',
+  width: '200px',
+  flexDirection: 'column',
+  alignItems: 'center',
+  padding: '10px 0',
+  boxShadow: '0 2px 5px rgba(0,0,0,0.2)',
+});
+
+/* Show nav-links when active on mobile */
+globalStyle('@media (max-width: 768px) .nav-links.active', {
+  display: 'flex',
+});
+
+/* Stack nav-links vertically on mobile */
+globalStyle('@media (max-width: 768px) .nav-links ul', {
+  flexDirection: 'column',
+  alignItems: 'center',
+  gap: '10px',
+  margin: 0,
+  padding: 0,
+});
+
+globalStyle('@media (max-width: 768px) .nav-links ul li', {
+  padding: '10px 0',
 });
 
 /* Hero Section */
@@ -211,47 +266,4 @@ globalStyle('blockquote', {
   color: '#333',
   borderLeft: '4px solid #0d47a1',
   paddingLeft: '20px',
-});
-
-/* Hamburger Button (default: hidden) */
-globalStyle('.hamburger', {
-  fontSize: '28px',
-  background: 'none',
-  color: '#ffffff',
-  border: 'none',
-  cursor: 'pointer',
-  display: 'none', // hidden by default
-  marginLeft: 'auto',
-});
-
-/* Show hamburger on smaller screens */
-globalStyle('@media (max-width: 768px) .hamburger', {
-  display: 'block',
-});
-
-globalStyle('@media (max-width: 768px) .nav-links', {
-  display: 'none',
-  width: '100%',
-  flexDirection: 'column', // ensures it stacks vertically
-});
-
-globalStyle('@media (max-width: 768px) .nav-links.active', {
-  display: 'flex', // changed from 'block' to 'flex'
-  flexDirection: 'column',
-  alignItems: 'center',
-  textAlign: 'center',
-  backgroundColor: '#0d47a1',
-  padding: '10px 0',
-});
-
-globalStyle('@media (max-width: 768px) .nav-links ul', {
-  flexDirection: 'column',
-  alignItems: 'center',
-  gap: '10px',
-  margin: 0,
-  padding: 0,
-});
-
-globalStyle('@media (max-width: 768px) .nav-links ul li', {
-  padding: '10px 0',
 });
