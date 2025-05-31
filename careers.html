@@ -2,73 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Careers | Civil Society</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers | My Civil Society</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <nav class="navbar">
     <div class="logo">
       <a href="index.html">
-        <img src="assets/LeftIcon.png" alt="Civil Society Logo" class="nav-logo-icon" />
+        <img src="/assets/LeftIcon.png" alt="CS Icon" class="nav-logo-icon">
       </a>
     </div>
-    <ul>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#services">Services</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-      <li><a href="careers.html" class="active">Careers</a></li>
-    </ul>
+    <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">☰</button>
+    <div class="nav-links" id="nav-links">
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#testimonials">Testimonials</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="careers.html" class="active">Careers</a></li>
+      </ul>
+    </div>
   </nav>
-<main>
-<header class="page-header">
-  <div class="page-header-content">
-    <h1>Join Our Mission</h1>
-    <p>Make an impact through mentorship and education.</p>
-  </div>
-</header>
 
-  <section class="section">
-    <h2>Civil Society</h2>
-    <p>
-      Civil Society is growing fast, and we’re looking for talented mentors and tutors to join our team.
-      If you thrive in a fast-paced environment and have a passion for helping students reach their potential, we’d love to hear from you.
-    </p>
-  </section>
+  <main>
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Join Our Mission</h1>
+        <p>Make an impact through mentorship and education.</p>
+      </div>
+    </header>
 
-  <section class="section light">
-    <h2>Career Opportunities</h2>
-    <p>
-      Civil Society offers competitive compensation and excellent opportunities for career growth. Our open positions change,
-      so we invite you to send your cover letter and resume to <a href="mailto:careers@mycivilsociety.com">careers@mycivilsociety.com</a>.
-    </p>
+    <section class="section">
+      <h2>Opportunities</h2>
+      <p>We’re always looking for passionate educators and mentors. Check out our current openings below.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Tutor (Grades K-12)</h3>
+          <p>Help shape the future, one student at a time.</p>
+        </div>
+        <div class="card">
+          <h3>Mentor</h3>
+          <p>Guide students to unlock their potential.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
- <h3>We’re currently hiring for:</h3>
-<ul style="text-align: left; max-width: 600px; margin: 20px auto; font-size: 1.05rem;">
-  <li>
-    <strong>Tutors (Grades K-12)</strong>
-    <ul style="margin-top: 5px; margin-left: 20px;">
-      <li>Math</li>
-      <li>English</li>
-      <li>Science</li>
-      <li>Social Studies</li>
-      <li>Spanish</li>
-      <li>Reading/ELA</li>
-    </ul>
-  </li>
-  <li><strong>Mentors</strong></li>
-  <li><strong>Executive Sales</strong></li>
-  <li><strong>Administrative Assistants</strong></li>
-</ul>
-
-    <p style="margin-top: 30px;">We look forward to hearing from you!</p>
-  </section>
-</main>
   <footer>
-    <p>© 2025 Civil Society. All rights reserved.</p>
+    <p>© 2025 My Civil Society. All rights reserved.</p>
   </footer>
 
+  <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

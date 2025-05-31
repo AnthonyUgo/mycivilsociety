@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Civil Society | Empowering Youth</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <nav class="navbar">
   <div class="logo">
     <a href="index.html">
-      <img src="assets/LeftIcon.png" alt="CS Icon" class="nav-logo-icon" />
+      <img src="/assets/LeftIcon.png" alt="CS Icon" class="nav-logo-icon">
     </a>
   </div>
 
   <button class="hamburger" id="menu-toggle" aria-label="Toggle menu">
-  ☰
-</button>
+    ☰
+  </button>
 
-<div class="nav-links" id="nav-links">
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#testimonials">Testimonials</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="careers.html">Careers</a></li>
-  </ul>
-</div>
-</nav>
-<main>
-<header class="hero">
-  <div class="hero-content">
-    <img src="assets/logo.png" alt="Civil Society Full Logo" class="hero-center-logo" />
-    <h1>Empowering the Next Generation</h1>
-    <p>Revolutionizing learning through impactful tutoring, mentorship, and life skills training.</p>
-    <a href="#contact" class="btn-primary">Get In Touch</a>
+  <div class="nav-links" id="nav-links">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="careers.html">Careers</a></li>
+    </ul>
   </div>
-</header>
+</nav>
+
+<main>
+  <header class="hero">
+    <div class="hero-content">
+      <img src="/assets/logo.png" alt="Civil Society Full Logo" class="hero-center-logo">
+      <h1>Empowering the Next Generation</h1>
+      <p>Revolutionizing learning through impactful tutoring, mentorship, and life skills training.</p>
+      <a href="#contact" class="btn-primary">Get In Touch</a>
+    </div>
+  </header>
 
   <section id="about" class="section">
     <h2>Who We Are</h2>
@@ -61,7 +61,7 @@
         <p>One-on-one guidance to foster personal and academic growth.</p>
       </div>
       <div class="card">
-        <h3>Workshops & Training</h3>
+        <h3>Workshops &amp; Training</h3>
         <p>Building real-world skills through hands-on experiences and training.</p>
       </div>
     </div>
@@ -76,23 +76,14 @@
   <section id="contact" class="section">
     <h2>Let's Connect</h2>
     <p>Reach out to partner with us, refer students, or learn more about our work.</p>
-    <a href="mailto:info@mycivilsociety.com" class="btn-secondary" style="margin-top: 20px; display: inline-block;">
-  Email Us
-</a>
+    <a href="mailto:info@mycivilsociety.com" class="btn-secondary" style="margin-top: 20px; display: inline-block;">Email Us</a>
   </section>
 </main>
-  <footer>
-    <p>© 2025 My Civil Society. All rights reserved.</p>
-  </footer>
 
-  <script>
-  const toggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
+<footer>
+  <p>© 2025 My Civil Society. All rights reserved.</p>
+</footer>
 
-  toggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-</script>
-
+<script type="module" src="/src/main.ts"></script>
 </body>
 </html>
