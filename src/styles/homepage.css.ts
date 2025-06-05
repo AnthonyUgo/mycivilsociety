@@ -266,3 +266,74 @@ globalStyle('blockquote', {
   borderLeft: '4px solid #0d47a1',
   paddingLeft: '20px',
 });
+
+/* Slideshow Styles (Targeted) */
+globalStyle('.slider', {
+  width: '100%',
+  overflow: 'hidden',
+  marginTop: '20px',
+});
+
+globalStyle('.slider-wrapper', {
+  display: 'flex',
+  transition: 'transform 0.5s ease-in-out',
+});
+
+globalStyle('.slide', {
+  flex: '0 0 100%',
+});
+
+globalStyle('.slide img', {
+  display: 'block',
+  width: '100%',
+  height: 'auto',
+});
+
+/* Meet Our Staff Section (Targeted) */
+globalStyle('#meet-our-staff .staff-grid', {
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+  gap: '20px',
+  marginTop: '30px',
+});
+
+globalStyle('#meet-our-staff .staff-card', {
+  background: '#e3f2fd',
+  borderLeft: '6px solid #0d47a1',
+  borderRadius: '8px',
+  padding: '20px',
+  textAlign: 'center',
+  boxShadow: '0 2px 5px rgba(0,0,0,0.05)',
+  width: '250px',
+});
+
+globalStyle('#meet-our-staff .staff-card img', {
+  borderRadius: '50%',
+  width: '150px',
+  height: '150px',
+  objectFit: 'cover',
+  marginBottom: '15px',
+});
+
+/* Careers Page Hero (Targeted) */
+globalStyle('.hero-careers', {
+  backgroundImage: "url('/assets/hero-careers.jpg')",
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  color: '#ffffff',
+  textAlign: 'center',
+  padding: '120px 20px',
+});
+
+globalStyle('.hero-careers h1', {
+  fontSize: '3rem',
+  fontWeight: 700,
+  marginBottom: '15px',
+});
+
+globalStyle('.hero-careers p', {
+  fontSize: '1.2rem',
+  maxWidth: '600px',
+  margin: '0 auto 25px',
+});
