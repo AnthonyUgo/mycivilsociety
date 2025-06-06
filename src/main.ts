@@ -8,6 +8,7 @@ import 'swiper/css';  // Only core CSS
 void new Swiper('.swiper', {
   modules: [Pagination, Autoplay],
   loop: true,
+  speed: 600, // milliseconds
   autoplay: {
     delay: 3000,
   },
