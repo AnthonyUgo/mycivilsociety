@@ -117,6 +117,7 @@ globalStyle('.hamburger', {
   cursor: 'pointer',
   display: 'none', // Hidden by default on desktop
   marginLeft: 'auto',
+  zIndex: 1100,
 });
 
 /* Show hamburger on mobile */
@@ -164,7 +165,7 @@ globalStyle('.hero', {
 });
 
 globalStyle('.hero-center-logo', {
-  height: '180px',
+  height: '240px',
   width: 'auto',
   display: 'block',
   margin: '0 auto 20px',
