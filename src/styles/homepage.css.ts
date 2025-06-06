@@ -76,10 +76,15 @@ globalStyle('.nav-logo-icon:hover', {
   transform: 'scale(1.05)',
 });
 
-/* Nav Links (Desktop) */
 globalStyle('.nav-links', {
-  display: 'flex',
+  display: 'none',
+  '@media': {
+    '(min-width: 769px)': {
+      display: 'flex',
+    },
+  },
 });
+
 
 globalStyle('.nav-links ul', {
   listStyle: 'none',
@@ -101,7 +106,7 @@ globalStyle('.nav-links ul li a:hover', {
   color: '#bbdefb',
 });
 
-// Hide hamburger by default on desktop
+// Hide hamburger by default
 globalStyle('.hamburger', {
   display: 'none',
 });
