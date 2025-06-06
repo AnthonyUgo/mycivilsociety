@@ -31,12 +31,24 @@ globalStyle('a:hover', {
   color: '#1976d2',
 });
 
-/* Body */
+/* Body with background */
 globalStyle('body', {
-  margin: 0,
+  backgroundImage: 'url("/assets/bermuda-triangle.svg")',
+  backgroundRepeat: 'repeat',
+  backgroundSize: 'contain',
+  backgroundAttachment: 'fixed', // optional, but gives a nice effect
+  fontFamily: 'Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif',
+  lineHeight: '1.5',
+  fontWeight: '400',
+  color: '#212121',
+  fontSynthesis: 'none',
+  textRendering: 'optimizeLegibility',
+  WebkitFontSmoothing: 'antialiased',
+  MozOsxFontSmoothing: 'grayscale',
   minWidth: '320px',
   minHeight: '100vh',
 });
+
 
 /* Navbar */
 globalStyle('.navbar', {
@@ -197,15 +209,16 @@ globalStyle('.btn-secondary:hover', {
   backgroundColor: '#1565c0',
 });
 
-/* Sections */
+/* .section background semi-transparent */
 globalStyle('.section', {
+  backgroundColor: 'rgba(255, 255, 255, 0.95)', // 95% white
   padding: '60px 20px',
   maxWidth: '1100px',
   margin: '40px auto',
-  backgroundColor: '#ffffff',
   borderRadius: '12px',
   boxShadow: '0 3px 10px rgba(0,0,0,0.05)',
 });
+
 
 globalStyle('.section h2', {
   fontSize: '2rem',
@@ -272,6 +285,9 @@ globalStyle('.slider', {
   width: '100%',
   overflow: 'hidden',
   marginTop: '20px',
+  maxWidth: '1100px',
+  marginLeft: 'auto',
+  marginRight: 'auto',
 });
 
 globalStyle('.slider-wrapper', {
@@ -286,7 +302,10 @@ globalStyle('.slide', {
 globalStyle('.slide img', {
   display: 'block',
   width: '100%',
-  height: 'auto',
+  maxHeight: '400px',     // limit the height of images
+  objectFit: 'cover',     // keeps images from stretching and crops nicely
+  borderRadius: '12px',   // soft edges
+  boxShadow: '0 3px 10px rgba(0,0,0,0.1)',
 });
 
 /* Meet Our Staff Section (Targeted) */
@@ -313,6 +332,7 @@ globalStyle('#meet-our-staff .staff-card img', {
   width: '150px',
   height: '150px',
   objectFit: 'cover',
+  objectPosition: 'center 20%',  // move the focus downward
   marginBottom: '15px',
 });
 
@@ -336,4 +356,41 @@ globalStyle('.hero-careers p', {
   fontSize: '1.2rem',
   maxWidth: '600px',
   margin: '0 auto 25px',
+});
+
+globalStyle('.swiper', {
+  width: '100%',
+  maxWidth: '1100px',
+  margin: '20px auto',
+});
+
+globalStyle('.swiper-slide img', {
+  display: 'block',
+  width: '100%',
+  maxHeight: '400px',
+  objectFit: 'cover',
+  borderRadius: '12px',
+  boxShadow: '0 3px 10px rgba(0,0,0,0.1)',
+});
+
+/* Dynamic Background Gradient */
+globalStyle('body', {
+  background: 'linear-gradient(135deg, #f0f8ff 25%, #ffffff 100%)',
+  backgroundAttachment: 'fixed',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+});
+
+globalStyle('body::before', {
+  content: '""',
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  backgroundImage: 'url("/assets/bermuda-traingle.svg")', // make sure this file exists
+  backgroundRepeat: 'repeat',
+  opacity: 0.15,
+  zIndex: 0,
+  pointerEvents: 'none',
 });
