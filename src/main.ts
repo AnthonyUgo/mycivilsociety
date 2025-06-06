@@ -1,10 +1,10 @@
-import './styles/homepage.css.ts'; // Already using Vanilla Extract styles
-import './scripts/navbar.js';      // Hamburger logic
+import './styles/homepage.css.ts';
+import './scripts/navbar.js';
 
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
+import Swiper from 'swiper';
+import 'swiper/css';
 
-const swiper = new Swiper('.swiper', {
+void new Swiper('.swiper', {
   loop: true,
   autoplay: {
     delay: 3000,
