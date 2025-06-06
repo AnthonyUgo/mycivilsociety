@@ -122,7 +122,7 @@ globalStyle('.hamburger', {
 
 /* Show hamburger on mobile */
 globalStyle('@media (max-width: 768px) .hamburger', {
-  display: 'block',
+  display: 'block !important',
 });
 
 /* Hide nav-links by default on mobile */
