@@ -1,12 +1,8 @@
 // src/styles/homepage.css.ts
-import { globalStyle } from '@vanilla-extract/css';
+import { globalStyle, style } from '@vanilla-extract/css';
 
-/* Reset & Base Styles */
-globalStyle('*', {
-  margin: 0,
-  padding: 0,
-  boxSizing: 'border-box',
-});
+/* Base Styles */
+globalStyle('*', { margin: 0, padding: 0, boxSizing: 'border-box' });
 
 globalStyle(':root', {
   fontFamily: 'Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif',
@@ -45,10 +41,7 @@ globalStyle('body', {
   textRendering: 'optimizeLegibility',
   WebkitFontSmoothing: 'antialiased',
   MozOsxFontSmoothing: 'grayscale',
-  background: `
-    linear-gradient(135deg, #f0f8ff 25%, #ffffff 100%),
-    url("/assets/bermuda-triangle.svg")
-  `,
+  background: 'linear-gradient(135deg, #f0f8ff 25%, #ffffff 100%), url("/assets/bermuda-triangle.svg")',
   backgroundRepeat: 'repeat',
   backgroundSize: 'cover, contain',  // gradient covers, SVG contained
   backgroundAttachment: 'fixed, fixed',  // both fixed for that nice scrolling effect
@@ -66,7 +59,7 @@ globalStyle('.navbar', {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  padding: '15px 40px',
+  padding: '10px 20px',  // reduce excessive spacing
   zIndex: 1000,
   boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
 });
@@ -108,51 +101,54 @@ globalStyle('.nav-links ul li a:hover', {
   color: '#bbdefb',
 });
 
-/* Hamburger (Hidden by Default) */
+// Hide hamburger by default on desktop
 globalStyle('.hamburger', {
+  display: 'none',
+});
+
+// Mobile hamburger button
+globalStyle('@media (max-width: 768px) and (min-width: 0px) .hamburger', {
+  display: 'block',
   fontSize: '28px',
   background: 'none',
   color: '#ffffff',
   border: 'none',
   cursor: 'pointer',
-  display: 'none', // Hidden by default on desktop
   marginLeft: 'auto',
   zIndex: 1100,
 });
 
-/* Show hamburger on mobile */
-globalStyle('@media (max-width: 768px) .hamburger', {
-  display: 'block !important',
-});
-
-/* Hide nav-links by default on mobile */
-globalStyle('@media (max-width: 768px) .nav-links', {
-  display: 'none !important',
+// Hide nav-links by default on mobile
+globalStyle('@media (max-width: 768px) and (min-width: 0px) .nav-links', {
+  display: 'none',
   position: 'absolute',
   top: '60px',
-  right: 0,
+  right: '0',
   backgroundColor: '#0d47a1',
   width: '200px',
   flexDirection: 'column',
   alignItems: 'center',
   padding: '10px 0',
   boxShadow: '0 2px 5px rgba(0,0,0,0.2)',
+  zIndex: 999,
 });
 
-globalStyle('@media (max-width: 768px) .nav-links.active', {
-  display: 'flex !important',
+// Show nav-links when active
+globalStyle('@media (max-width: 768px) and (min-width: 0px) .nav-links.active', {
+  display: 'flex',
 });
 
-/* Stack nav-links vertically on mobile */
-globalStyle('@media (max-width: 768px) .nav-links ul', {
+// Stack nav-links vertically
+globalStyle('@media (max-width: 768px) and (min-width: 0px) .nav-links ul', {
   flexDirection: 'column',
   alignItems: 'center',
   gap: '10px',
-  margin: 0,
-  padding: 0,
+  margin: '0',
+  padding: '0',
 });
 
-globalStyle('@media (max-width: 768px) .nav-links ul li', {
+// Nav-links list item spacing
+globalStyle('@media (max-width: 768px) and (min-width: 0px) .nav-links ul li', {
   padding: '10px 0',
 });
 
@@ -393,3 +389,6 @@ globalStyle('.swiper-slide img', {
   boxShadow: '0 3px 10px rgba(0,0,0,0.1)',
 });
 
+
+// Dummy export to force CSS generation
+export const dummy = style({});
