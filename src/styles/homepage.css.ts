@@ -31,12 +31,12 @@ globalStyle('a:hover', {
   color: '#1976d2',
 });
 
-/* Body with background */
+
+/* Body with background gradient + SVG overlay */
 globalStyle('body', {
-  backgroundImage: 'url("/assets/bermuda-triangle.svg")',
-  backgroundRepeat: 'repeat',
-  backgroundSize: 'contain',
-  backgroundAttachment: 'fixed', // optional, but gives a nice effect
+  margin: 0,
+  minWidth: '320px',
+  minHeight: '100vh',
   fontFamily: 'Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif',
   lineHeight: '1.5',
   fontWeight: '400',
@@ -45,8 +45,14 @@ globalStyle('body', {
   textRendering: 'optimizeLegibility',
   WebkitFontSmoothing: 'antialiased',
   MozOsxFontSmoothing: 'grayscale',
-  minWidth: '320px',
-  minHeight: '100vh',
+  background: `
+    linear-gradient(135deg, #f0f8ff 25%, #ffffff 100%),
+    url("/assets/bermuda-triangle.svg")
+  `,
+  backgroundRepeat: 'repeat',
+  backgroundSize: 'cover, contain',  // gradient covers, SVG contained
+  backgroundAttachment: 'fixed, fixed',  // both fixed for that nice scrolling effect
+  backgroundBlendMode: 'overlay',  // softly merges the SVG with the gradient
 });
 
 
@@ -338,9 +344,10 @@ globalStyle('#meet-our-staff .staff-card img', {
 
 /* Careers Page Hero (Targeted) */
 globalStyle('.hero-careers', {
-  backgroundImage: "url('/assets/hero-careers.jpg')",
+  backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/assets/staff-foto.jpg')",
   backgroundSize: 'cover',
-  backgroundPosition: 'center',
+  backgroundPosition: 'center 20%', // shifted lower
+  backgroundRepeat: 'no-repeat',
   color: '#ffffff',
   textAlign: 'center',
   padding: '120px 20px',
@@ -350,12 +357,24 @@ globalStyle('.hero-careers h1', {
   fontSize: '3rem',
   fontWeight: 700,
   marginBottom: '15px',
+  textShadow: '3px 3px 6px rgba(0, 0, 0, 0.6)', // thicker and more fade
+  opacity: 0.95, // slight fade for blending
 });
 
 globalStyle('.hero-careers p', {
   fontSize: '1.2rem',
   maxWidth: '600px',
   margin: '0 auto 25px',
+  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', // consistent with h1
+  opacity: 0.9, // slight fade
+});
+
+
+globalStyle('.hero-careers .hero-content', {
+  backgroundColor: 'rgba(255, 255, 255, 0.2)',  // white with 20% opacity
+  borderRadius: '12px',
+  padding: '20px',
+  display: 'inline-block',
 });
 
 globalStyle('.swiper', {
@@ -373,24 +392,3 @@ globalStyle('.swiper-slide img', {
   boxShadow: '0 3px 10px rgba(0,0,0,0.1)',
 });
 
-/* Dynamic Background Gradient */
-globalStyle('body', {
-  background: 'linear-gradient(135deg, #f0f8ff 25%, #ffffff 100%)',
-  backgroundAttachment: 'fixed',
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover',
-});
-
-globalStyle('body::before', {
-  content: '""',
-  position: 'fixed',
-  top: 0,
-  left: 0,
-  width: '100%',
-  height: '100%',
-  backgroundImage: 'url("/assets/bermuda-traingle.svg")', // make sure this file exists
-  backgroundRepeat: 'repeat',
-  opacity: 0.15,
-  zIndex: 0,
-  pointerEvents: 'none',
-});
