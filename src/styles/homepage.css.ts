@@ -41,11 +41,19 @@ globalStyle('body', {
   textRendering: 'optimizeLegibility',
   WebkitFontSmoothing: 'antialiased',
   MozOsxFontSmoothing: 'grayscale',
-  background: 'linear-gradient(135deg, #f0f8ff 25%, #ffffff 100%), url("/assets/bermuda-triangle.svg")',
+  backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('/assets/education-pattern.png')`,
   backgroundRepeat: 'repeat',
-  backgroundSize: 'cover, contain',  // gradient covers, SVG contained
-  backgroundAttachment: 'fixed, fixed',  // both fixed for that nice scrolling effect
-  backgroundBlendMode: 'overlay',  // softly merges the SVG with the gradient
+  backgroundSize: '300px 300px',
+  backgroundAttachment: 'scroll',
+  backgroundBlendMode: 'overlay',
+    '@media': {
+    '(max-width: 768px)': {
+      backgroundSize: '200px 200px',
+       },
+    '(min-width: 769px)': {
+      backgroundSize: '300px 300px',
+    },
+  },
 });
 
 
@@ -76,15 +84,6 @@ globalStyle('.nav-logo-icon:hover', {
   transform: 'scale(1.05)',
 });
 
-globalStyle('.nav-links', {
-  display: 'none',
-  '@media': {
-    '(min-width: 769px)': {
-      display: 'flex',
-    },
-  },
-});
-
 
 globalStyle('.nav-links ul', {
   listStyle: 'none',
@@ -107,28 +106,17 @@ globalStyle('.nav-links ul li a:hover', {
 });
 
 
-// Mobile hamburger button
-globalStyle('.hamburger', {
-  display: 'none',
-  '@media': {
-    '(max-width: 768px)': {
-      display: 'block',
-      fontSize: '28px',
-      background: 'none',
-      color: '#ffffff',
-      border: 'none',
-      cursor: 'pointer',
-      marginLeft: 'auto',
-      zIndex: 1100,
-    },
-  },
-});
+// Mobile Hamburger Button Section
 
 // Hide nav-links by default on mobile
 globalStyle('.nav-links', {
+  display: 'none',
   '@media': {
+    '(min-width: 769px)': {
+      display: 'flex',
+    },
     '(max-width: 768px)': {
-      display: 'none',
+      display: 'none',  // default on mobile
       position: 'absolute',
       top: '60px',
       right: '0',
@@ -142,6 +130,7 @@ globalStyle('.nav-links', {
     },
   },
 });
+
 
 // Show nav-links when active
 globalStyle('.nav-links.active', {
