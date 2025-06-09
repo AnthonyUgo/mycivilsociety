@@ -106,50 +106,80 @@ globalStyle('.nav-links ul li a:hover', {
   color: '#bbdefb',
 });
 
-// Hide hamburger by default
-globalStyle('.hamburger', {
-  display: 'none',
-});
 
 // Mobile hamburger button
-globalStyle('@media (max-width: 768px) and (min-width: 0px) .hamburger', {
-  display: 'block',
-  fontSize: '28px',
-  background: 'none',
-  color: '#ffffff',
-  border: 'none',
-  cursor: 'pointer',
-  marginLeft: 'auto',
-  zIndex: 1100,
+globalStyle('.hamburger', {
+  display: 'none',
+  '@media': {
+    '(max-width: 768px)': {
+      display: 'block',
+      fontSize: '28px',
+      background: 'none',
+      color: '#ffffff',
+      border: 'none',
+      cursor: 'pointer',
+      marginLeft: 'auto',
+      zIndex: 1100,
+    },
+  },
 });
 
 // Hide nav-links by default on mobile
-globalStyle('@media (max-width: 768px) and (min-width: 0px) .nav-links', {
-  display: 'none',
-  position: 'absolute',
-  top: '60px',
-  right: '0',
-  backgroundColor: '#0d47a1',
-  width: '200px',
-  flexDirection: 'column',
-  alignItems: 'center',
-  padding: '10px 0',
-  boxShadow: '0 2px 5px rgba(0,0,0,0.2)',
-  zIndex: 999,
+globalStyle('.nav-links', {
+  '@media': {
+    '(max-width: 768px)': {
+      display: 'none',
+      position: 'absolute',
+      top: '60px',
+      right: '0',
+      backgroundColor: '#0d47a1',
+      width: '200px',
+      flexDirection: 'column',
+      alignItems: 'center',
+      padding: '10px 0',
+      boxShadow: '0 2px 5px rgba(0,0,0,0.2)',
+      zIndex: 999,
+    },
+  },
 });
 
 // Show nav-links when active
-globalStyle('@media (max-width: 768px) and (min-width: 0px) .nav-links.active', {
-  display: 'flex',
+globalStyle('.nav-links.active', {
+  '@media': {
+    '(max-width: 768px)': {
+      display: 'flex',
+    },
+  },
+});
+
+// Show nav-links when active
+globalStyle('.hamburger', {
+  display: 'none',
+  '@media': {
+    '(max-width: 768px)': {
+      display: 'block',
+      fontSize: '28px',
+      background: 'none',
+      color: '#ffffff',
+      border: 'none',
+      cursor: 'pointer',
+      marginLeft: 'auto',
+      zIndex: 1100,
+    },
+  },
 });
 
 // Stack nav-links vertically
-globalStyle('@media (max-width: 768px) and (min-width: 0px) .nav-links ul', {
-  flexDirection: 'column',
-  alignItems: 'center',
-  gap: '10px',
-  margin: '0',
-  padding: '0',
+globalStyle('.nav-links ul', {
+  '@media': {
+    '(max-width: 768px)': {
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: '10px',
+      margin: '0',
+      padding: '0',
+    },
+  },
 });
 
 // Nav-links list item spacing
