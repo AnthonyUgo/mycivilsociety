@@ -28,6 +28,26 @@ globalStyle('a:hover', {
 });
 
 
+/* Apply doodle background ONLY to .background-wrapper */
+globalStyle('.background-wrapper', {
+  backgroundImage: `
+    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+    url('/assets/mycivilsociety-doodle.png')
+  `,
+  backgroundRepeat: 'repeat',
+  backgroundSize: '300px 300px',
+  backgroundAttachment: 'scroll',
+  backgroundBlendMode: 'overlay',
+  '@media': {
+    '(max-width: 768px)': {
+      backgroundSize: '200px 200px',
+    },
+    '(min-width: 769px)': {
+      backgroundSize: '300px 300px',
+    },
+  },
+});
+
 /* Body with background gradient + SVG overlay */
 globalStyle('body', {
   margin: 0,
@@ -43,19 +63,18 @@ globalStyle('body', {
   MozOsxFontSmoothing: 'grayscale',
   backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('/assets/education-pattern.png')`,
   backgroundRepeat: 'repeat',
-  backgroundSize: '300px 300px',
+  backgroundSize: '200px 200px, 400px 400px, 400px 400px',  // different sizes for each layer
   backgroundAttachment: 'scroll',
   backgroundBlendMode: 'overlay',
-    '@media': {
+  '@media': {
     '(max-width: 768px)': {
-      backgroundSize: '200px 200px',
-       },
+      backgroundSize: '150px 150px, 200px 200px, 200px 200px',
+    },
     '(min-width: 769px)': {
-      backgroundSize: '300px 300px',
+      backgroundSize: '250px 250px, 300px 300px, 300px 300px',
     },
   },
 });
-
 
 /* Navbar */
 globalStyle('.navbar', {
@@ -74,8 +93,13 @@ globalStyle('.navbar', {
 
 /* Logo */
 globalStyle('.nav-logo-icon', {
-  height: '48px',
-  width: 'auto',
+  height: '54px',
+  width: '54px', // keep square for circular container
+  backgroundColor: 'rgba(255, 255, 255, 0.2)', // semi-transparent white
+  border: '1px solid #bbdefb', // subtle border in brand accent
+  borderRadius: '50%',
+  padding: '6px',
+  boxShadow: '0 1px 2px rgba(0,0,0,0.1)', // softer shadow
   cursor: 'pointer',
   transition: 'transform 0.2s ease',
 });
@@ -187,9 +211,15 @@ globalStyle('.hero', {
 globalStyle('.hero-center-logo', {
   height: '240px',
   width: 'auto',
-  display: 'block',
+  display: 'inline-block',
+  backgroundColor: 'rgba(255, 255, 255, 0.15)', // lighter background for subtlety
+  padding: '12px',
+  borderRadius: '12px',
+  border: '1px solid rgba(255, 255, 255, 0.3)', // subtle border instead of heavy shadow
+  boxShadow: '0 2px 4px rgba(0,0,0,0.1)', // lighter shadow
   margin: '0 auto 20px',
 });
+
 
 globalStyle('.hero h1', {
   fontSize: '3rem',
