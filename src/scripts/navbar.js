@@ -10,8 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Toggle the active class on nav-links
       navLinks.classList.toggle('active');
 
-      // Optional: toggle hamburger icon
-      hamburger.textContent = isExpanded ? '☰' : '✖️';
+      
     });
   }
 
