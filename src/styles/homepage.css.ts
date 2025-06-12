@@ -366,13 +366,7 @@ globalStyle('.slide img', {
 });
 
 /* Meet Our Staff Section (Targeted) */
-globalStyle('#meet-our-staff .staff-grid', {
-  display: 'flex',
-  flexWrap: 'wrap',
-  justifyContent: 'center',
-  gap: '20px',
-  marginTop: '30px',
-});
+
 
 globalStyle('#meet-our-staff .staff-card', {
   background: '#e3f2fd',
@@ -391,6 +385,25 @@ globalStyle('#meet-our-staff .staff-card img', {
   objectFit: 'cover',
   objectPosition: 'center 20%',  // move the focus downward
   marginBottom: '15px',
+});
+
+globalStyle('.staff-slider', {
+  display: 'flex',
+  overflowX: 'auto',
+  gap: '20px',
+  scrollSnapType: 'x mandatory',
+  WebkitOverflowScrolling: 'touch',
+  padding: '20px 0',
+  scrollBehavior: 'smooth',
+});
+
+globalStyle('.staff-slider::-webkit-scrollbar', {
+  display: 'none',
+});
+
+globalStyle('.staff-slider .staff-card', {
+  flex: '0 0 250px',
+  scrollSnapAlign: 'center',
 });
 
 /* Careers Page Hero (Targeted) */

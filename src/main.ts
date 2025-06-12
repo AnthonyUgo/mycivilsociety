@@ -1,5 +1,6 @@
 import './styles/homepage.css.ts';
 import './scripts/navbar.js';
+import './scripts/staff-slider.js';
 
 import Swiper from 'swiper';
 import { Pagination, Autoplay } from 'swiper/modules';
