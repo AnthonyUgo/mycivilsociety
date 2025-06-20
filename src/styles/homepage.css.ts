@@ -201,12 +201,35 @@ globalStyle('@media (max-width: 768px) and (min-width: 0px) .nav-links ul li', {
 });
 
 /* Hero Section */
+globalStyle('.hero-content', {
+  backgroundColor: 'rgba(0, 0, 0, 0.4)', // dark semi-transparent background
+  padding: '20px',
+  borderRadius: '12px',
+  display: 'inline-block',
+  maxWidth: '90%',
+  margin: '0 auto',
+  backdropFilter: 'blur(4px)', // glassmorphism style
+  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
+  
+  '@media': {
+    '(max-width: 768px)': {
+      padding: '16px',
+      borderRadius: '8px',
+      marginTop: '20px',
+    },
+  },
+});
+
 globalStyle('.hero', {
-  background: 'linear-gradient(to right, #0d47a1, #1976d2)',
+  backgroundImage: `url('/assets/classroom-hero.jpg')`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
   color: '#ffffff',
   textAlign: 'center',
   padding: '120px 20px',
 });
+
 
 globalStyle('.hero-center-logo', {
   height: '240px',
@@ -218,19 +241,39 @@ globalStyle('.hero-center-logo', {
   border: '1px solid rgba(255, 255, 255, 0.3)', // subtle border instead of heavy shadow
   boxShadow: '0 2px 4px rgba(0,0,0,0.1)', // lighter shadow
   margin: '0 auto 20px',
-});
 
+  // ✅ Mobile optimization
+  '@media': {
+    '(max-width: 768px)': {
+      height: '140px',
+      padding: '8px',
+    },
+  },
+});
 
 globalStyle('.hero h1', {
   fontSize: '3rem',
   fontWeight: 700,
   marginBottom: '15px',
+
+  '@media': {
+    '(max-width: 768px)': {
+      fontSize: '2rem',
+    },
+  },
 });
 
 globalStyle('.hero p', {
   fontSize: '1.2rem',
   maxWidth: '600px',
   margin: '0 auto 25px',
+
+  '@media': {
+    '(max-width: 768px)': {
+      fontSize: '1rem',
+      padding: '0 10px',
+    },
+  },
 });
 
 /* Buttons */
